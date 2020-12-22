@@ -1,0 +1,23 @@
+﻿@model MovieRating.ViewModels.MovieRatingViewModel
+
+<div>
+    <form asp-controller="Home" asp-action="Index" method="post">
+        @Html.HiddenFor(modelItem => modelItem.EpisodeId)
+        <h1>
+            @Html.DisplayFor(modelItem => modelItem.Title)
+        </h1>
+        <div class="form-group">
+            @Html.DisplayFor(modelItem => modelItem.OpeningCrawl)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(modelItem => modelItem.Rating)
+            @Html.DisplayFor(modelItem => modelItem.Rating)
+        </div>
+        <div class="form-group">
+            @Html.TextBoxFor(modelItem => modelItem.Rating, new { @Value = "" })
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Save" class="btn btn-primary" />
+        </div>
+    </form>
+</div>

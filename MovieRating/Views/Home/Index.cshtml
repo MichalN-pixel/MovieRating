@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model MovieRating.ViewModels.MovieRatingListViewModel
+
+<div class="text-center">
+    @foreach (var movieRatingViewModel in Model.MovieRatingViewModels)
+    {
+        <partial name="MovieRatingView" model="movieRatingViewModel"/>
+    }
+</div>
